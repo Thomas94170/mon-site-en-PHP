@@ -19,7 +19,7 @@
     <br><br>
     <h2 class="fst-italic text-warning text-center">Cercle : Périmètre et Aire</h2>
     <br><br>
-    <p class="fst-italic text-warning text-center">Périmètre = ℼ x R</p>
+    <p class="fst-italic text-warning text-center">Périmètre = ℼ x R x 2</p>
     <br>
     <p class="fst-italic text-warning text-center">Aire = ℼ x R x R</p>
     <br><br>
@@ -52,7 +52,7 @@
             $rayon = $_POST['cercle'];
             echo "<p> Résultat : </p>";
             if (isset($_POST['perimetre'])) {
-                $perimetre = 3.14 * $_POST['cercle'];
+                $perimetre = 2 * 3.14 * $_POST['cercle'];
                 echo "<p> notre périmètre est de : " . $perimetre . "</p>";
             } else {
                 echo "<p class='fst-italic text-warning text-center'>Case du périmètre non cochée!</p>";
