@@ -17,6 +17,12 @@
                 <li class="nav-item">
                     <a class="nav-link text-warning" href="testPHP2.php">Exercice 2</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="testPHP3.php">Exercice 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="testPHP4.php">Exercice 4</a>
+                </li>
             </ul>
         </div>
     </div>

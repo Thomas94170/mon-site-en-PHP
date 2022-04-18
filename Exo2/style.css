@@ -16,3 +16,8 @@ nav{
 li a :hover{
     background-color: #93ACB5;
 }
+
+table{
+    margin: 0;
+    padding: 0;
+}
