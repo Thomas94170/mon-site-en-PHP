@@ -44,7 +44,7 @@
 
     <div class="fst-italic text-warning text-center border border-warning table">
         <?php
-        if (isset($_POST['chiffre'])) {
+        if (isset($_POST['chiffre']) && $_POST['chiffre'] > 0) {
             if ($nbreAleatoire === (int)$_POST['chiffre']) {
                 echo "<p class='fst-italic text-warning text-center'>Trouvé!</p>";
             } elseif ((int)$_POST['chiffre'] < $nbreAleatoire) {
@@ -69,3 +69,6 @@
 </body>
 
 </html>
+
+<!-- en php un nombre aléatoire se fait avec rand(min,max) -->
+<!-- (int) précise un nombre -->

@@ -12,19 +12,19 @@
                     <a class="nav-link active text-warning" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-warning" href="testPHP.php">Exercice 1</a>
+                    <a class="nav-link text-warning" href="testPHP.php">Multiplication</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-warning" href="testPHP2.php">Exercice 2</a>
+                    <a class="nav-link text-warning" href="testPHP2.php">Pyramide</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-warning" href="testPHP3.php">Exercice 3</a>
+                    <a class="nav-link text-warning" href="testPHP3.php">Périmètre/Aire</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-warning" href="testPHP4.php">Exercice 4</a>
+                    <a class="nav-link text-warning" href="testPHP4.php">IMC</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-warning" href="testPHP5.php">Exercice 5</a>
+                    <a class="nav-link text-warning" href="testPHP5.php">Chiffre mystère</a>
                 </li>
             </ul>
         </div>
