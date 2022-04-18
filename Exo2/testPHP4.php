@@ -49,7 +49,7 @@
             $imc = ($_POST['poids'] / ($_POST['taille'] * ($_POST['taille']))) * 10000;
             echo "<p> L'imc est de  : " . $imc . "</p>";
         } else {
-            echo "<h3 class='fst-italic text-warning text-center'>Saisissez un chiffre!</h3>";
+            echo "<p class='fst-italic text-warning text-center'>Saisissez un chiffre!</p>";
         }
         ?>
 

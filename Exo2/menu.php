@@ -23,6 +23,9 @@
                 <li class="nav-item">
                     <a class="nav-link text-warning" href="testPHP4.php">Exercice 4</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="testPHP5.php">Exercice 5</a>
+                </li>
             </ul>
         </div>
     </div>

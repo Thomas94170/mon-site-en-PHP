@@ -64,7 +64,7 @@
                 echo "<p class='fst-italic text-warning text-center'>Case de l'aire non cochée!</p>";
             }
         } else {
-            echo "<h3 class='fst-italic text-warning text-center'>Saisissez un chiffre!</h3>";
+            echo "<p class='fst-italic text-warning text-center'>Saisissez un chiffre!</p>";
         }
         ?>
 
