@@ -26,6 +26,9 @@
                 <li class="nav-item">
                     <a class="nav-link text-warning" href="testPHP5.php">Chiffre mystère</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="testPHP6.php">Ma moyenne</a>
+                </li>
             </ul>
         </div>
     </div>
