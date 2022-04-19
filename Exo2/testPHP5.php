@@ -13,20 +13,22 @@
 <body>
     <?php
     include("menu.php");
-    $nbreAleatoire = rand(1, 10);
+
+    session_start();
+    if (!isset($_SESSION['chiffreAleatoire'])) {
+        $_SESSION['chiffreAleatoire'] = rand(1, 100);
+    }
+
     ?>
     <br><br>
     <h1 class="fst-italic text-warning text-center">Mon cinquième exercice avec PHP</h1>
     <br><br>
-    <h2 class="fst-italic text-warning text-center">Trouver le bon nombre (entre 1 et 10)</h2>
+    <h2 class="fst-italic text-warning text-center">Trouver le bon nombre (entre 1 et 100)</h2>
 
 
     <br><br>
     <div class="d-flex justify-content-center">
         <form action="#" method="POST">
-            <div class="d-flex justify-content-center">
-                <button type="submit" class="btn btn-warning">Réinitialiser</button>
-            </div>
             <br>
             <div class="mb-3 text-warning text-center">
                 <label for="chiffre" class="form-label text-warning">Devinez!</label>
@@ -36,20 +38,37 @@
             <div class="d-flex justify-content-center">
                 <button type="submit" class="btn btn-warning">Submit</button>
             </div>
-            <br><br><br>
-
+            <br>
         </form>
     </div>
-    <br><br>
+    <br>
+    <div class="d-flex justify-content-center">
+        <form action="#" method="POST">
+            <div class="mb-3 text-warning text-center d-flex justify-content-center">
+                <input type="hidden" name="erase" value="yes">
+                <button type="submit" class="btn btn-warning">Réinitialiser</button>
+            </div>
+        </form>
+    </div>
+
 
     <div class="fst-italic text-warning text-center border border-warning table">
         <?php
+
+        if (isset($_POST['erase']) && $_POST['erase'] === "yes") {
+            $_SESSION['chiffreAleatoire'] = rand(1, 100);
+        }
+        // echo $_SESSION['chiffreAleatoire'];
+        $nbreAleatoire = $_SESSION['chiffreAleatoire'];
+
+
         if (isset($_POST['chiffre']) && $_POST['chiffre'] > 0) {
+            $chiffreSaisi = (int)$_POST['chiffre'];
             if ($nbreAleatoire === (int)$_POST['chiffre']) {
                 echo "<p class='fst-italic text-warning text-center'>Trouvé!</p>";
-            } elseif ((int)$_POST['chiffre'] < $nbreAleatoire) {
+            } elseif ($chiffreSaisi < $nbreAleatoire) {
                 echo "<p class='fst-italic text-warning text-center'>Ton chiffre est plus petit que la bonne réponse</p>";
-            } elseif ((int)$_POST['chiffre'] > $nbreAleatoire) {
+            } elseif ($chiffreSaisi > $nbreAleatoire) {
                 echo "<p class='fst-italic text-warning text-center'>Ton chiffre est plus grand que la bonne réponse</p>";
             }
         } else {
