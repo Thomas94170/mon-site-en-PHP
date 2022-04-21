@@ -30,7 +30,13 @@
                     <a class="nav-link text-warning" href="testPHP6.php">Ma moyenne</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-warning" href="testPHP7.php">Mes personnages</a>
+                    <a class="nav-link text-warning" href="testPHP7.php">Mes animaux</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="testPHP8.php">Tableau</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="testPHP9.php">Liste déroulante & Tab</a>
                 </li>
             </ul>
         </div>

@@ -77,6 +77,6 @@
 
 </html>
 
-§
+
 <!-- faire un menu déroulant  -->
 <!-- pour afficher les images il suffit de faire un if, else if -->
