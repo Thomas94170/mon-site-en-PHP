@@ -25,7 +25,7 @@
 
     <br><br>
     <div class="d-flex justify-content-center">
-        <form action="#" method="POST">
+        <form action="#" method="GET">
             <br>
             <div class="mb-3 text-warning text-center">
                 <label for="nb" class="form-label text-warning">Combien de notes?</label>
@@ -44,16 +44,16 @@
 
     <div class="fst-italic text-warning text-center border border-warning">
         <?php
-        if (isset($_POST['nb']) && $_POST['nb'] > 0) {
-            $nbreNotes = intval($_POST['nb']);
-            var_dump($nbreNotes);
+        if (isset($_GET['nb']) && $_GET['nb'] > 0) {
+            $nbreNotes = $_GET['nb'];
+            // var_dump($nbreNotes);
             echo '<div class="d-flex justify-content-center">';
-            echo '<form action="#" method="POST">';
+            echo '<form action="#" method="GET">';
             for ($i = 1; $i <= $nbreNotes; $i++) {
                 echo "<br/>";
                 echo '<div class="text-warning text-center">';
-                echo '<label for="note"' . $i . 'class="form-label text-warning">' . $i . '</label>';
-                echo '<input type="number" class="form-control" id="note"' . $i . 'name="note"' . $i . 'required></div>';
+                echo "<label for= \"note" . $i . "\">Note" . $i . ": </label>";
+                echo "<input type=\"number\" name=\"note" . $i . "\" id= \"note" . $i . "\" required></div>";
                 echo "<br/>";
             }
             echo '<div class="d-flex justify-content-center">';
@@ -62,6 +62,15 @@
             echo '</form>';
             echo '</div>';
             echo '<br/>';
+            if (isset($_GET['note1'])) {
+                //var_dump($_GET['note']);
+                $res = 0;
+                for ($i = 1; $i <= $nbreNotes; $i++) {
+                    $res += $_GET['note' . $i];
+                }
+                echo "<p class='fst-italic text-warning text-center'>La moyenne est de :" . $res / $nbreNotes;
+                echo "</p>";
+            }
         } else {
             echo "<p class='fst-italic text-warning text-center'>Renseigner le nombre de notes!</p>";
         }
@@ -81,5 +90,9 @@
 </html>
 
 <!-- dans cet exercice, il faut générer des formulaires suivant le nbre de notes que nous renseignons,
-je stocke la récup de la note avec $_POST['note'] dans une variable $nbreNotes
+je stocke la récup de la note avec $_GET['note'] dans une variable $nbreNotes
 pour générer le nbre d input voulu, il faut utiliser une boucle for -->
+
+<!-- il faut passer dans cet exercice à la méthode GET car elle conserve les champs saisies e,tre les différentes de saisies de formulaires  -->
+<!-- chapitre 33 pour revenir dessus
+ -->

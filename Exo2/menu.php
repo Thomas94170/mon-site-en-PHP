@@ -29,6 +29,9 @@
                 <li class="nav-item">
                     <a class="nav-link text-warning" href="testPHP6.php">Ma moyenne</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="testPHP7.php">Mes personnages</a>
+                </li>
             </ul>
         </div>
     </div>
