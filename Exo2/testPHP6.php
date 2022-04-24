@@ -62,17 +62,20 @@
             echo '</form>';
             echo '</div>';
             echo '<br/>';
-            if (isset($_GET['note1'])) {
-                //var_dump($_GET['note']);
-                $res = 0;
-                for ($i = 1; $i <= $nbreNotes; $i++) {
-                    $res += $_GET['note' . $i];
-                }
-                echo "<p class='fst-italic text-warning text-center'>La moyenne est de :" . $res / $nbreNotes;
-                echo "</p>";
-            }
         } else {
             echo "<p class='fst-italic text-warning text-center'>Renseigner le nombre de notes!</p>";
+        }
+        if (isset($_GET['note1'])) {
+            //var_dump($_GET['note']);
+            $i = 1;
+            $res = 1;
+            do {
+                $res += $_GET['note' . $i];
+                echo "<p> note $i. =" . $_GET['note' . $i] . "</p>";
+                $i++;
+            } while (isset($_GET['note' . $i]));
+            echo "<p class='fst-italic text-warning text-center'>La moyenne est de : " . $res / ($i - 1);
+            echo "</p>";
         }
         ?>
 

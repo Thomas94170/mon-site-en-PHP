@@ -52,26 +52,24 @@
         $chunli = ['Chun-Li', 22, 'Sanda'];
         $ken = ['Ken', 25, 'Karaté'];
         $bison = ['Mr.Bison', 45, 'Psycho Power'];
-        if (isset($_POST['perso'])) {
-            if ($_POST['perso'] === "ryu") {
-                echo "<img src='./img/Ryu.jpg' alt='ryu' srcset='' height='200px' width='auto'>";
-                afficherPerso($ryu);
-            } elseif ($_POST['perso'] === "sagat") {
-                echo "<img src='./img/Sagat.jpg' alt='sagat' srcset='' height='200px' width='auto'>";
-                afficherPerso($sagat);
-            } elseif ($_POST['perso'] === "chunli") {
-                echo "<img src='./img/Chun-Li.jpg' alt='chunli' srcset='' height='200px' width='auto'>";
-                afficherPerso($chunli);
-            } elseif ($_POST['perso'] === "ken") {
-                echo "<img src='./img/Ken.jpg' alt='ken' srcset='' height='200px' width='auto'>";
-                afficherPerso($ken);
-            } elseif ($_POST['perso'] === "bison") {
-                echo "<img src='./img/Bison.jpg' alt='mr.bison' srcset='' height='200px' width='auto'>";
-                afficherPerso($bison);
-            }
-        } else {
-            echo "<p class='fst-italic text-warning text-center'>Choisis ton personnage!</p>";
+
+        if (!isset($_POST['perso']) || $_POST['perso'] === "ryu") {
+            echo "<img src='./img/Ryu.jpg' alt='ryu' srcset='' height='200px' width='auto'>";
+            afficherPerso($ryu);
+        } elseif ($_POST['perso'] === "sagat") {
+            echo "<img src='./img/Sagat.jpg' alt='sagat' srcset='' height='200px' width='auto'>";
+            afficherPerso($sagat);
+        } elseif ($_POST['perso'] === "chunli") {
+            echo "<img src='./img/Chun-Li.jpg' alt='chunli' srcset='' height='200px' width='auto'>";
+            afficherPerso($chunli);
+        } elseif ($_POST['perso'] === "ken") {
+            echo "<img src='./img/Ken.jpg' alt='ken' srcset='' height='200px' width='auto'>";
+            afficherPerso($ken);
+        } elseif ($_POST['perso'] === "bison") {
+            echo "<img src='./img/Bison.jpg' alt='mr.bison' srcset='' height='200px' width='auto'>";
+            afficherPerso($bison);
         }
+
 
 
 
@@ -110,3 +108,17 @@
 <!-- pour afficher les éléments de mon tableau je dois faire une function -->
 <!-- dans ma function je prends en param $persoStreetFighter que je pourrais nommer comme je veux  -->
 <!-- je fais ensuite un affichage en reprenant les index de mon tableau -->
+
+<!-- si on renseigne un booléen dans notre tableau( par exemple sexe homme true femme false dans le dernier index de notre tableau) -->
+<!-- on fait le code suivant
+ if($persoStreetFighter[4]=== true){
+     echo "sexe : Homme";
+ }else{
+     echo "sexe : Femme";
+ }
+ -->
+
+<!-- dans mon premier if avec !isset cette ligne de code permet de sélectionner par defaut le premier membre de ma liste déroulante -->
+<!-- voir chapitre 34 pour les tableaux associatifs, je laisse le code tel quel -->
+
+<!-- voir chapitre 35 pour voir le tableau d un tableau -->
